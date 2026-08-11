@@ -3,250 +3,602 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pileki Patisserie</title>
+
+  <title>Pileki Patisserie | Çekmeköy İstanbul</title>
+
+  <meta name="description"
+        content="Pileki Patisserie Çekmeköy. Taze pastalar, tatlılar, kurabiyeler, kruvasanlar ve özel tasarım pastalar.">
+
   <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-      font-family:Arial, sans-serif;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
 
-    body{
-      background:#fffaf4;
-      color:#3a2a22;
-      line-height:1.6;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf4;
+      color: #3a2a22;
+      line-height: 1.6;
     }
 
-    header{
-      background:#5a3825;
-      color:white;
-      padding:18px 25px;
-      position:sticky;
-      top:0;
-      z-index:100;
+    header {
+      background: #4b2e20;
+      color: white;
+      padding: 18px 25px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
     }
 
-    nav{
-      max-width:1100px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
 
-    nav h1{
-      font-size:24px;
+    nav h1 {
+      font-size: 24px;
     }
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:15px;
-      font-size:15px;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 15px;
     }
 
-    .hero{
-      min-height:75vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:60px 20px;
-      background:linear-gradient(rgba(60,35,20,.55),rgba(60,35,20,.55)),
-      url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80');
-      background-size:cover;
-      background-position:center;
-      color:white;
+    nav a:hover {
+      color: #e8bd7c;
     }
 
-    .hero h2{
-      font-size:52px;
-      margin-bottom:15px;
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+
+      background:
+        linear-gradient(rgba(45,25,15,.55), rgba(45,25,15,.55)),
+        url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=85');
+
+      background-size: cover;
+      background-position: center;
+      color: white;
     }
 
-    .hero p{
-      font-size:20px;
-      margin-bottom:25px;
+    .hero h2 {
+      font-size: 55px;
+      margin-bottom: 10px;
     }
 
-    .btn{
-      display:inline-block;
-      background:#d6a86a;
-      color:#2c1c13;
-      padding:13px 22px;
-      border-radius:30px;
-      text-decoration:none;
-      margin:6px;
-      font-weight:bold;
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 25px;
     }
 
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:70px 20px;
+    .btn {
+      display: inline-block;
+      background: #d8a45d;
+      color: #2c1c13;
+      padding: 14px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 6px;
+      transition: .2s;
     }
 
-    section h2{
-      text-align:center;
-      font-size:34px;
-      margin-bottom:35px;
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #e7b974;
     }
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:22px;
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 20px;
     }
 
-    .card{
-      background:white;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 8px 25px rgba(0,0,0,.08);
+    section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
     }
 
-    .card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
     }
 
-    .card div{
-      padding:20px;
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+      transition: .25s;
     }
 
-    .card h3{
-      margin-bottom:8px;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .about{
-      background:#f3e7d8;
-      border-radius:22px;
-      padding:35px;
-      text-align:center;
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
 
-    .contact{
-      text-align:center;
+    .card-content {
+      padding: 22px;
     }
 
-    .contact p{
-      margin:10px 0;
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 21px;
     }
 
-    footer{
-      text-align:center;
-      padding:30px 20px;
-      background:#3d281c;
-      color:white;
+    .about-box {
+      background: #f2e5d4;
+      border-radius: 25px;
+      padding: 45px 30px;
+      text-align: center;
     }
 
-    @media(max-width:600px){
-      nav{
-        flex-direction:column;
+    .about-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .reviews {
+      background: #f8f1e8;
+      max-width: none;
+    }
+
+    .reviews-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.07);
+    }
+
+    .stars {
+      color: #d59638;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .review-card p {
+      margin-bottom: 15px;
+    }
+
+    .review-card strong {
+      color: #5a3825;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .contact-box h3 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .contact-box p {
+      margin: 8px 0;
+    }
+
+    .contact-box a.phone {
+      color: #5a3825;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hours {
+      max-width: 420px;
+      margin: 20px auto;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee2d5;
+      padding: 9px 0;
+    }
+
+    footer {
+      background: #3d281c;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 700px) {
+
+      nav {
+        flex-direction: column;
       }
 
-      nav a{
-        margin:0 6px;
+      nav div {
+        text-align: center;
       }
 
-      .hero h2{
-        font-size:38px;
+      nav a {
+        margin: 0 6px;
+        font-size: 13px;
+      }
+
+      .hero h2 {
+        font-size: 39px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+
+      section h2 {
+        font-size: 30px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
 <header>
   <nav>
+
     <h1>Pileki Patisserie</h1>
+
     <div>
       <a href="#urunler">Ürünlerimiz</a>
       <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#yorumlar">Yorumlar</a>
       <a href="#iletisim">İletişim</a>
     </div>
+
   </nav>
 </header>
 
+
 <div class="hero">
+
   <div>
+
     <h2>Pileki Patisserie</h2>
+
     <p>Her Lokmada Mutluluk</p>
-    <a class="btn" href="#urunler">Ürünlerimizi Keşfet</a>
-    <a class="btn" href="#iletisim">Sipariş Ver</a>
+
+    <a class="btn" href="#urunler">
+      Ürünlerimizi Keşfet
+    </a>
+
+    <a class="btn" href="#iletisim">
+      Bize Ulaşın
+    </a>
+
   </div>
+
 </div>
 
+
 <section id="urunler">
+
   <h2>Ürünlerimiz</h2>
 
   <div class="cards">
 
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80">
-      <div>
+
+      <img
+        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+        alt="Pileki Patisserie yaş pastalar">
+
+      <div class="card-content">
+
         <h3>Yaş Pastalar</h3>
-        <p>Özel günleriniz için taze ve özenle hazırlanan pastalar.</p>
+
+        <p>
+          Özel günleriniz için taze ve özenle hazırlanan
+          birbirinden lezzetli pastalar.
+        </p>
+
       </div>
+
     </div>
 
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80">
-      <div>
+
+      <img
+        src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
+        alt="Kruvasan ve hamur işleri">
+
+      <div class="card-content">
+
         <h3>Kruvasan & Hamur İşleri</h3>
-        <p>Günlük hazırlanan çıtır ve taptaze lezzetler.</p>
+
+        <p>
+          Günlük hazırlanan çıtır ve taptaze hamur işleri.
+        </p>
+
       </div>
+
     </div>
 
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80">
-      <div>
+
+      <img
+        src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80"
+        alt="Pileki Patisserie kurabiyeler">
+
+      <div class="card-content">
+
         <h3>Kurabiyeler</h3>
-        <p>Kahvenizin yanına yakışacak enfes kurabiyeler.</p>
+
+        <p>
+          Çayınızın ve kahvenizin yanına eşlik edecek
+          enfes kurabiyeler.
+        </p>
+
       </div>
+
     </div>
 
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80">
-      <div>
+
+      <img
+        src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80"
+        alt="Özel tasarım pasta">
+
+      <div class="card-content">
+
         <h3>Özel Tasarım Pastalar</h3>
-        <p>Doğum günü ve kutlamalarınız için kişiye özel tasarımlar.</p>
+
+        <p>
+          Doğum günleri ve özel kutlamalarınız için
+          kişiye özel tasarımlar.
+        </p>
+
       </div>
+
     </div>
+
 
   </div>
+
 </section>
+
 
 <section id="hakkimizda">
-  <div class="about">
+
+  <div class="about-box">
+
     <h2>Hakkımızda</h2>
+
     <p>
-      Pileki Patisserie olarak kaliteli malzemeleri, tazeliği ve özenli işçiliği
-      bir araya getiriyoruz. Amacımız her ürünümüzde unutulmaz bir lezzet sunmak.
+      Pileki Patisserie olarak kaliteli malzemeleri,
+      tazeliği ve özenli işçiliği bir araya getiriyoruz.
+      Pastalarımızdan tatlılarımıza kadar her ürünümüzde
+      misafirlerimize keyifli ve lezzetli bir deneyim
+      sunmayı amaçlıyoruz.
     </p>
+
   </div>
+
 </section>
+
+
+<section id="yorumlar" class="reviews">
+
+  <div class="reviews-inner">
+
+    <h2>Müşterilerimiz Ne Diyor?</h2>
+
+    <div class="cards">
+
+
+      <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Tatlıları ve yiyecekleri çok beğeniyorum.
+          Samimi ve sıcak bir kafe.
+        </p>
+
+        <strong>— uzi aleyna</strong>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Ürünler kaliteli, lezzetli ve hizmet
+          oldukça özenli.
+        </p>
+
+        <strong>— Fikret Açıkgöz</strong>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Birinci sınıf ürünler, temiz ve rahat
+          bir mekan.
+        </p>
+
+        <strong>— Nuri Acerman</strong>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Pastaları, tatlıları, börekleri ve
+          kahvaltılıkları taze ve lezzetli.
+        </p>
+
+        <strong>— Zafer Deniz</strong>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Sandviç çeşitleri bol, malzemeler taze
+          ve bahçesi oldukça keyifli.
+        </p>
+
+        <strong>— Burcu Ö.</strong>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
 
 <section id="iletisim" class="contact">
+
   <h2>İletişim</h2>
 
-  <p><strong>Telefon:</strong> 05XX XXX XX XX</p>
-  <p><strong>Instagram:</strong> @pilekipatisserie</p>
-  <p><strong>Adres:</strong> Adres buraya yazılacak</p>
-  <p><strong>Çalışma Saatleri:</strong> 09:00 - 22:00</p>
+  <div class="contact-box">
 
-  <a class="btn" href="https://wa.me/905XXXXXXXXX">
-    WhatsApp'tan Sipariş Ver
-  </a>
+
+    <h3>Telefon</h3>
+
+    <p>
+      <a class="phone" href="tel:+902164619090">
+        0216 461 90 90
+      </a>
+    </p>
+
+
+    <h3>Adres</h3>
+
+    <p>
+      Merkez Mahallesi<br>
+      Selimiye Caddesi No:1 No:2 A8<br>
+      34782 Çekmeköy / İstanbul
+    </p>
+
+
+    <h3>Çalışma Saatleri</h3>
+
+    <div class="hours">
+
+      <div class="hours-row">
+        <span>Pazartesi</span>
+        <strong>07:00 – 23:45</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Salı</span>
+        <strong>07:00 – 23:45</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Çarşamba</span>
+        <strong>07:00 – 23:45</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Perşembe</span>
+        <strong>07:00 – 23:45</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Cuma</span>
+        <strong>07:00 – 23:45</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Cumartesi</span>
+        <strong>07:00 – 23:45</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Pazar</span>
+        <strong>07:00 – 23:45</strong>
+      </div>
+
+    </div>
+
+
+    <a
+      class="btn"
+      href="https://maps.apple.com/place?place-id=IDE146956748E0236"
+      target="_blank">
+      Foursquare Puanları ve Yorumları
+    </a>
+
+
+  </div>
+
 </section>
 
+
 <footer>
-  © 2026 Pileki Patisserie
+
+  <p>
+    © 2026 Pileki Patisserie
+  </p>
+
+  <p>
+    Çekmeköy / İstanbul
+  </p>
+
 </footer>
+
 
 </body>
 </html>
