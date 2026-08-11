@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pileki Patisserie</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#fffaf4;
+      color:#3a2a22;
+      line-height:1.6;
+    }
+
+    header{
+      background:#5a3825;
+      color:white;
+      padding:18px 25px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    nav{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    nav h1{
+      font-size:24px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:15px;
+      font-size:15px;
+    }
+
+    .hero{
+      min-height:75vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:60px 20px;
+      background:linear-gradient(rgba(60,35,20,.55),rgba(60,35,20,.55)),
+      url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80');
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+
+    .hero h2{
+      font-size:52px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#d6a86a;
+      color:#2c1c13;
+      padding:13px 22px;
+      border-radius:30px;
+      text-decoration:none;
+      margin:6px;
+      font-weight:bold;
+    }
+
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 20px;
+    }
+
+    section h2{
+      text-align:center;
+      font-size:34px;
+      margin-bottom:35px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .card div{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-bottom:8px;
+    }
+
+    .about{
+      background:#f3e7d8;
+      border-radius:22px;
+      padding:35px;
+      text-align:center;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:10px 0;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      background:#3d281c;
+      color:white;
+    }
+
+    @media(max-width:600px){
+      nav{
+        flex-direction:column;
+      }
+
+      nav a{
+        margin:0 6px;
+      }
+
+      .hero h2{
+        font-size:38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>Pileki Patisserie</h1>
+    <div>
+      <a href="#urunler">Ürünlerimiz</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h2>Pileki Patisserie</h2>
+    <p>Her Lokmada Mutluluk</p>
+    <a class="btn" href="#urunler">Ürünlerimizi Keşfet</a>
+    <a class="btn" href="#iletisim">Sipariş Ver</a>
+  </div>
+</div>
+
+<section id="urunler">
+  <h2>Ürünlerimiz</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80">
+      <div>
+        <h3>Yaş Pastalar</h3>
+        <p>Özel günleriniz için taze ve özenle hazırlanan pastalar.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80">
+      <div>
+        <h3>Kruvasan & Hamur İşleri</h3>
+        <p>Günlük hazırlanan çıtır ve taptaze lezzetler.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80">
+      <div>
+        <h3>Kurabiyeler</h3>
+        <p>Kahvenizin yanına yakışacak enfes kurabiyeler.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80">
+      <div>
+        <h3>Özel Tasarım Pastalar</h3>
+        <p>Doğum günü ve kutlamalarınız için kişiye özel tasarımlar.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="hakkimizda">
+  <div class="about">
+    <h2>Hakkımızda</h2>
+    <p>
+      Pileki Patisserie olarak kaliteli malzemeleri, tazeliği ve özenli işçiliği
+      bir araya getiriyoruz. Amacımız her ürünümüzde unutulmaz bir lezzet sunmak.
+    </p>
+  </div>
+</section>
+
+<section id="iletisim" class="contact">
+  <h2>İletişim</h2>
+
+  <p><strong>Telefon:</strong> 05XX XXX XX XX</p>
+  <p><strong>Instagram:</strong> @pilekipatisserie</p>
+  <p><strong>Adres:</strong> Adres buraya yazılacak</p>
+  <p><strong>Çalışma Saatleri:</strong> 09:00 - 22:00</p>
+
+  <a class="btn" href="https://wa.me/905XXXXXXXXX">
+    WhatsApp'tan Sipariş Ver
+  </a>
+</section>
+
+<footer>
+  © 2026 Pileki Patisserie
+</footer>
+
+</body>
+</html>
