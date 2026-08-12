@@ -10,7 +10,6 @@
         content="Pileki Patisserie Çekmeköy İstanbul. Profiterol, ekler, pasta, cheesecake, sütlü tatlı, şerbetli tatlı, kurabiye ve dondurma çeşitleri.">
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -24,8 +23,6 @@
       color: #3a2a22;
       line-height: 1.6;
     }
-
-    /* ÜST MENÜ */
 
     header {
       background: #4b2e20;
@@ -61,8 +58,6 @@
       color: #e8bd7c;
     }
 
-    /* ANA SAYFA */
-
     .hero {
       min-height: 80vh;
       display: flex;
@@ -93,8 +88,6 @@
       margin-bottom: 25px;
     }
 
-    /* BUTONLAR */
-
     .btn {
       display: inline-block;
       background: #d8a45d;
@@ -111,8 +104,6 @@
       transform: translateY(-2px);
       background: #e7b974;
     }
-
-    /* GENEL */
 
     section {
       max-width: 1150px;
@@ -133,12 +124,9 @@
       margin: 0 auto 40px;
     }
 
-    /* ÜRÜNLER */
-
     .cards {
       display: grid;
-      grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 24px;
     }
 
@@ -172,8 +160,6 @@
       color: #4b2e20;
     }
 
-    /* ÜRÜN ALT İSİMLERİ */
-
     .product-list {
       margin-top: 12px;
     }
@@ -185,8 +171,6 @@
       margin: 5px 0;
       letter-spacing: .2px;
     }
-
-    /* HAKKIMIZDA */
 
     .about-box {
       background: #f2e5d4;
@@ -242,8 +226,6 @@
       font-size: 22px;
     }
 
-    /* YORUMLAR */
-
     .reviews {
       background: #f8f1e8;
       max-width: none;
@@ -274,8 +256,6 @@
     .review-card strong {
       color: #5a3825;
     }
-
-    /* İLETİŞİM */
 
     .contact {
       text-align: center;
@@ -308,8 +288,6 @@
       font-size: 19px;
     }
 
-    /* ÇALIŞMA SAATLERİ */
-
     .hours {
       max-width: 440px;
       margin: 20px auto;
@@ -323,8 +301,6 @@
       padding: 9px 0;
     }
 
-    /* ALT KISIM */
-
     footer {
       background: #3d281c;
       color: white;
@@ -332,10 +308,7 @@
       padding: 30px 20px;
     }
 
-    /* TELEFON */
-
     @media (max-width: 700px) {
-
       nav {
         flex-direction: column;
       }
@@ -389,17 +362,13 @@
         font-size: 14px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-<!-- ÜST MENÜ -->
-
 <header>
   <nav>
-
     <h1>Pileki Patisserie</h1>
 
     <div>
@@ -408,19 +377,13 @@
       <a href="#yorumlar">Yorumlar</a>
       <a href="#iletisim">İletişim</a>
     </div>
-
   </nav>
 </header>
 
 
-<!-- ANA SAYFA -->
-
 <div class="hero">
-
   <div>
-
     <h2>Pileki Patisserie</h2>
-
     <p>Her Lokmada Mutluluk</p>
 
     <a class="btn" href="#urunler">
@@ -430,13 +393,9 @@
     <a class="btn" href="#iletisim">
       Bize Ulaşın
     </a>
-
   </div>
-
 </div>
 
-
-<!-- ÜRÜNLER -->
 
 <section id="urunler">
 
@@ -465,6 +424,7 @@
           <p>Beyaz Kremalı Ekler</p>
           <p>Çikolatalı Ekler</p>
           <p>Çilekli/Muzlu Mini Rulo</p>
+          <p>Profiterol</p>
         </div>
 
       </div>
@@ -472,7 +432,7 @@
     </div>
 
 
-    <!-- PASTA -->
+    <!-- PASTA ÇEŞİTLERİ -->
 
     <div class="card">
 
@@ -484,10 +444,22 @@
 
         <h3>Pasta Çeşitleri</h3>
 
-        <p>
-          Özel günlerden tatlı molalarına kadar
-          her ana eşlik eden pasta çeşitlerimiz.
-        </p>
+        <div class="product-list">
+          <p>Parça Çikolatalı Pasta</p>
+          <p>Fıstıklı Çikolatalı Pasta</p>
+          <p>Çilekli Çikolatalı Pasta</p>
+          <p>Frambuazlı Çikolatalı Pasta</p>
+          <p>Orman Meyveli Çikolatalı Pasta</p>
+          <p>Fıstıklı Profiterollü Pasta</p>
+          <p>Muzlu Çilekli Pasta</p>
+          <p>Çilekli Pasta</p>
+          <p>Muzlu Profiterol Soslu Pasta</p>
+          <p>Çilekli Köstebek Pasta</p>
+          <p>Lotuslu Çilekli Pasta</p>
+          <p>Tiramisu</p>
+          <p>Muzlu Frambuazlı Pasta</p>
+          <p>Orman Meyveli Beyaz Pasta</p>
+        </div>
 
       </div>
 
@@ -608,8 +580,6 @@
 </section>
 
 
-<!-- HAKKIMIZDA -->
-
 <section id="hakkimizda">
 
   <div class="about-box">
@@ -639,7 +609,6 @@
     <div class="about-grid">
 
       <div class="about-card">
-
         <h3>Vizyonumuz</h3>
 
         <p>
@@ -650,11 +619,9 @@
           ettiği güçlü bir pastane markası
           haline getirmek.
         </p>
-
       </div>
 
       <div class="about-card">
-
         <h3>Misyonumuz</h3>
 
         <p>
@@ -664,7 +631,6 @@
           ve Pileki'ye gelen herkesin güzel
           bir deneyimle ayrılmasını sağlamak.
         </p>
-
       </div>
 
     </div>
@@ -673,8 +639,6 @@
 
 </section>
 
-
-<!-- YORUMLAR -->
 
 <section id="yorumlar" class="reviews">
 
@@ -685,7 +649,6 @@
     <div class="cards">
 
       <div class="review-card">
-
         <div class="stars">★★★★★</div>
 
         <p>
@@ -694,12 +657,9 @@
         </p>
 
         <strong>— uzi aleyna</strong>
-
       </div>
 
-
       <div class="review-card">
-
         <div class="stars">★★★★★</div>
 
         <p>
@@ -708,12 +668,9 @@
         </p>
 
         <strong>— Fikret Açıkgöz</strong>
-
       </div>
 
-
       <div class="review-card">
-
         <div class="stars">★★★★★</div>
 
         <p>
@@ -722,12 +679,9 @@
         </p>
 
         <strong>— Nuri Acerman</strong>
-
       </div>
 
-
       <div class="review-card">
-
         <div class="stars">★★★★★</div>
 
         <p>
@@ -736,12 +690,9 @@
         </p>
 
         <strong>— Zafer Deniz</strong>
-
       </div>
 
-
       <div class="review-card">
-
         <div class="stars">★★★★★</div>
 
         <p>
@@ -751,7 +702,6 @@
         </p>
 
         <strong>— Burcu Ö.</strong>
-
       </div>
 
     </div>
@@ -760,8 +710,6 @@
 
 </section>
 
-
-<!-- İLETİŞİM -->
 
 <section id="iletisim" class="contact">
 
@@ -779,7 +727,6 @@
       </a>
     </p>
 
-
     <h3>Adres</h3>
 
     <p>
@@ -789,7 +736,6 @@
       <br>
       34782 Çekmeköy / İstanbul
     </p>
-
 
     <h3>Çalışma Saatleri</h3>
 
@@ -832,7 +778,6 @@
 
     </div>
 
-
     <h3>Sosyal Medya & İletişim</h3>
 
     <a
@@ -859,7 +804,6 @@
       WhatsApp
     </a>
 
-
     <h3>Puanlar & Yorumlar</h3>
 
     <a
@@ -876,10 +820,8 @@
 
 
 <footer>
-
   <p>© 2026 Pileki Patisserie</p>
   <p>Çekmeköy / İstanbul</p>
-
 </footer>
 
 </body>
